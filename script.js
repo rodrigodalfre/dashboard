@@ -19,9 +19,10 @@ $(document).ready(() => {
             type: 'GET',
                 url: 'php/service.php',
                 data: `competencia=${competencia}`,
-                dataType: 'json',
+                // dataType: 'json',
                 success: dados => {
-                    $('#numeroVendas').html(dados.numeroVendas)
+                    //$('#numeroVendas').html(dados.numeroVendas)
+                    console.log(dados)
                 },
                 error: erro => {console.log(erro)}
 
