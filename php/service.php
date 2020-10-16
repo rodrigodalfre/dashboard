@@ -51,15 +51,22 @@ $dashboard = new Dashboard();
 $conexao = new Conexao();
 $service = new Service($conexao, $dashboard);
 
+//Ano e mês
+$competencia = explode('-', $_GET['competencia']);
+$ano = $competencia[0];
+$mes = $competencia[1];
+
+//Função nativa CalDaysInMonth espera 3 parâmetros, calendário(grego), mes e ano
+$dia_mes = cal_days_in_month(CAL_GREGORIAN, $mes, $ano);
+
 //SETTERS
-$dashboard->__set('data_inicio', '2020-08-01'); //DATA INÍCIO
-$dashboard->__set('data_fim', '2020-08-31'); //DATA FIM
+$dashboard->__set('data_inicio', $ano.'-'.$mes.'-01'); //DATA INÍCIO
+$dashboard->__set('data_fim', $ano.'-'.$mes.'-'.$dia_mes); //DATA FIM
 $dashboard->__set('numeroVendas', $service->getNumeroVendas()); //NÚMERO DE VENDAS
 $dashboard->__set('totalVendas', $service->getTotalVendas()); //TOTAL DE VENDAS
 
+//Transformar um objeto literal para o JavaScript
+echo json_encode($dashboard);
 
-
-echo '<pre>';
-print_r($dashboard);
 
 ?>

@@ -2,16 +2,16 @@
 
 class Dashboard {
 
-    private $data_inicio;
-    private $data_fim;
-    private $numeroVendas;
-    private $totalVendas;
-    private $totalDespesas;
-    private $clientAtivos;
-    private $clientInativos;
-    private $totalReclamacao;
-    private $totalElogios;
-    private $totalSugestao;
+    public $data_inicio;
+    public $data_fim;
+    public $numeroVendas;
+    public $totalVendas;
+    public $totalDespesas;
+    public $clientAtivos;
+    public $clientInativos;
+    public $totalReclamacao;
+    public $totalElogios;
+    public $totalSugestao;
 
     public function __set($attr, $value){
         $this->$attr = $value;
@@ -21,7 +21,6 @@ class Dashboard {
     public function __get($attr){
         return $this->$attr;
     }
-
 
 }
 
