@@ -14,7 +14,8 @@ $(document).ready(() => {
                 success: dados => {
                     $('#numeroVendas').html(dados.numeroVendas) //Número Vendas
                     $('#totalDespesas').html(dados.totalDespesas) //Total Despesas
-                    $('#clientInativos').html(dados.clientInativos) //Clientes inativos
+                    $('#clientInativos').html(dados.clientInativos) //Clientes Inativos
+                    $('#clientAtivos').html(dados.clientAtivos) //Clientes Ativos
                     $('#totalVendas').html(dados.totalVendas) //Total Vendas
                     $('#totalElogios').html(dados.clientInativos) //Total Elogios
                     $('#totalReclamacao').html(dados.totalReclamacao) //Total Reclamação
@@ -23,8 +24,7 @@ $(document).ready(() => {
                 error: erro => {console.log(erro)}
             })
         })
-    } 
-
+    }
     
     //Ajax
     $('#documentacao').on('click', () => {

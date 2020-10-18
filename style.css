@@ -9,6 +9,10 @@ body {
     padding: 15px;
 }
 
+.borda {
+  border: 1px solid gray;
+}
+
 .nav-side-menu {
   overflow: auto;
   background-color: #2e353d;
