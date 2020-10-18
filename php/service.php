@@ -143,8 +143,8 @@ $dashboard->__set('totalSugestao', $service->getTotalSugestao()); //SUGESTOES
 
 
 //Transformar um objeto literal para o JavaScript
-// echo json_encode($dashboard);
-print_r($dashboard);
+echo json_encode($dashboard);
+// print_r($dashboard);
 
 
 ?>
